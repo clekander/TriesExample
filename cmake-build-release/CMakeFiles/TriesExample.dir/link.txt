@@ -1,0 +1,1 @@
+/usr/local/Cellar/gcc/9.2.0_3/bin/g++-9  -O3 -DNDEBUG -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/TriesExample.dir/main.cpp.o CMakeFiles/TriesExample.dir/Trie.cpp.o  -o TriesExample 

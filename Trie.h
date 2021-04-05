@@ -54,7 +54,7 @@ public:
     /**
      * removes word from trie
      */
-    void Remove(std::string word);
+    void Delete(std::string word);
     Node* Remove(Node* node, std::string word, int depth);
 
     /**

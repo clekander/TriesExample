@@ -2,25 +2,27 @@
 #include "Trie.h"
 
 int main() {
-    Trie trie;
+    Trie t;
 
-    trie.Insert("hello");
-    trie.Insert("he");
-    trie.Insert("hi");
-    trie.Insert("high");
-    trie.Insert("a");
-    trie.Insert("apple");
-    trie.Insert("I");
+    t.Insert("hello");
+    t.Insert("he");
+    t.Insert("hi");
+    t.Insert("app");
+    t.Insert("i");
 
-    std::cout << trie.Search("hello") << std::endl;
-    std::cout << trie.Search("he") << std::endl;
-    std::cout << trie.StartsWith("hell") << std::endl;
-    trie.Remove("goodbye");
-    trie.Remove("hello");
-    std::cout << trie.Search("hello") << std::endl;
-    std::cout << trie.Search("he") << std::endl;
+    std::cout << t.Search("hi") << std::endl;
+    std::cout << t.Search("h") << std::endl;
+    std::cout << t.StartsWith("h") << std::endl;
+    std::cout << t.Search("her") << std::endl;
+    
+    t.Delete("goodbye");
+    t.Delete("hello");
+    t.Delete("app");
+    t.Delete("he");
 
-    std::cout << trie.StartsWith("hell") << std::endl;
+    std::cout << t.Search("hello") << std::endl;
+    std::cout << t.Search("he") << std::endl;
+
 
     return 0;
 }

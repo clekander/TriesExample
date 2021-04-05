@@ -52,7 +52,7 @@ bool Trie::StartsWith(std::string start) {
     return false;
 }
 
-void Trie::Remove(std::string word) {
+void Trie::Delete(std::string word) {
     if(Search(word)) {
         Remove(root, word, 0);
     }
@@ -62,14 +62,9 @@ void Trie::Remove(std::string word) {
 }
 
 Node* Trie::Remove(Node* node, std::string word, int depth) {
-    if(node == nullptr) {
-        return nullptr;
-    }
 
     if(depth == word.length())  {
-        if(node->isWord) {
-            node->isWord = false;
-        }
+        node->isWord = false;
 
         if(!node->hasChildren()) {
             delete(node);
