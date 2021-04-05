@@ -2,7 +2,7 @@
 
 An implementation of a trie data structure.
 
-###Functions
+### Functions
 
 * Insert: takes in a string and inserts into trie
 * Search: searches trie for full string
